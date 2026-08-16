@@ -35,31 +35,14 @@ def main():
     # Software Developer
     developer = SoftwareDeveloperAgent()
 
-    solution = developer.develop(requirements)
+    result = developer.work(requirements)
 
     print("\n")
     print("=" * 60)
     print("Software Developer Report")
     print("=" * 60)
 
-    print("\nArchitecture:")
-    print(solution.architecture)
-
-    print("\nTechnologies:")
-    for technology in solution.technologies:
-        print(f"- {technology}")
-
-    print("\nProject Structure:")
-    for item in solution.project_structure:
-        print(f"- {item}")
-
-    print("\nImplementation Plan:")
-    for step in solution.implementation_plan:
-        print(f"- {step}")
-
-    print("\nRisks:")
-    for risk in solution.risks:
-        print(f"- {risk}")
+    print(result)
 
 
 if __name__ == "__main__":
